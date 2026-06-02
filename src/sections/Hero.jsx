@@ -56,9 +56,9 @@ export const Hero = () => {
                 </span>
               </h1>
               <p className="text-lg text-muted-foreground max-w-lg animate-fade-in animation-delay-300">
-                Hi, I'm Ricardo, a software engineer specializing in React,
-                Next.js and TypeScript. I build scalable and performant web
-                applications with a focus on clean code and user experience.
+                Hi, I'm Ricardo, a web developer specializing in React, Next.js
+                and TypeScript. I build scalable and performant web applications
+                with a focus on clean code and user experience.
               </p>
             </div>
             {/* CTA Buttons */}
