@@ -1,6 +1,8 @@
 import { Button } from "@/components/Button";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
-import { ArrowRight, Download } from "lucide-react";
+import { ArrowRight, ChevronDown, Download } from "lucide-react";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export const Hero = () => {
   return (
@@ -60,14 +62,45 @@ export const Hero = () => {
               </p>
             </div>
             {/* CTA Buttons */}
-            <div>
+            <div className="flex flex-wrap  gap-4 animate-fade-in animation-delay-300">
               <Button size="lg">
                 Contact Me <ArrowRight className="w-5 h-5" />
               </Button>
               <AnimatedBorderButton />
+              {/* Social Link */}
+              <div className="flex items-center gap-4 animated-fade-in animation-delay-400">
+                <span className="text-sm text-muted-foreground">
+                  Follow Me:{" "}
+                </span>
+                {[
+                  { icon: FaGithub, href: "#" },
+                  { icon: FaLinkedin, href: "#" },
+                  { icon: FaXTwitter, href: "#" },
+                ].map((social, idx) => (
+                  <a
+                    key={idx}
+                    href={social.href}
+                    className="p-2 rounded-full glass hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                  >
+                    {<social.icon className="w-5 h-5" />}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
           {/* right column - Image */}
+          <div className="relative animate-fade-in animation-delay-300">
+            {/* Profile Image */}
+            <div className="relative max-w-md mx-auto">
+              <div className="realative glass rounded-3xl p-2 glow-border">
+                <img
+                  src="/profile-photo.jpg"
+                  alt="Ricardo Torres"
+                  className="w-full aspect-4/5 object-cover rounded-2xl"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
